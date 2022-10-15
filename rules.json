@@ -1,0 +1,18 @@
+[
+  {
+    "id" : 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "h1", "operation": "remove" },
+        { "header": "h2", "operation": "set", "value": "modified-v2" },
+        { "header": "h3", "operation": "set", "value": "h3-value" }
+      ]
+    },
+    "condition" : {
+      "urlFilter" : "|http*",
+      "resourceTypes" : ["script", "main_frame", "sub_frame"]
+    }
+  }
+]
